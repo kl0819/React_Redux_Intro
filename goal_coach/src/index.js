@@ -14,7 +14,7 @@ import SignUp from './components/SignUp';
 const store = createStore(reducer);
 
 firebaseApp.auth().onAuthStateChanged(user => {
-	if (user){ 
+	if (user){
 		//console.log('user has signed in or up', user);
 		const { email } = user;
 		store.dispatch(logUser(email));
